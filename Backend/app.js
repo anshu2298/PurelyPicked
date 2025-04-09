@@ -24,7 +24,10 @@ const app = express();
 const port = process.env.PORT || 4000;
 
 // Allow multiple origins
-const allowedOridins = ["http://localhost:5173"];
+const allowedOridins = [
+  "http://localhost:5173",
+  "https://purelypicked-frontend.vercel.app",
+];
 
 app.post("/stripe", express.raw({ type: "application/json" }), stripeWebhook);
 

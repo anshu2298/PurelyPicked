@@ -58,11 +58,13 @@ const start = async () => {
       console.log("Connected to DB....");
     });
     await connectCloudinary();
+    app.listen(
+      port,
+      console.log(`Server is running on http://localhost:${port}`)
+    );
   } catch (error) {
     console.log(error.message);
   }
 };
 
 start();
-
-export default app;
